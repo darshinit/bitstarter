@@ -6,7 +6,7 @@ app.use(express.logger());
 app.get('/', function(request, response) {
     fs.readFile('index.html', function (err, data) {
    if (err) throw err;
-   response.send('Hello World!');
+   response.send(data.toString('utf-8'));
   }); 
 });
 
